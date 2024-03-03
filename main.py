@@ -71,14 +71,14 @@
 # lista.sort()  #tylko liczby nie mozna sortowac stringow z intami
 # print(lista)
 
-slownik = {'klucz': 'wartosc', 1: 2, 'a':5, 4: 'b'}
-print(slownik)
-print(slownik[4])
-slownik[6]=45
-print(slownik)
-slownik.pop(1)
-print(slownik)
-print(slownik.keys())
-print(slownik.values())
-del slownik[6]
-print(slownik)
+# slownik = {'klucz': 'wartosc', 1: 2, 'a':5, 4: 'b'}
+# print(slownik)
+# print(slownik[4])
+# slownik[6]=45
+# print(slownik)
+# slownik.pop(1)
+# print(slownik)
+# print(slownik.keys())
+# print(slownik.values())
+# del slownik[6]
+# print(slownik)
