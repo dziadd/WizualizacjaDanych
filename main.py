@@ -50,7 +50,7 @@
 # print(b)
 # print(type(b))
 
-# lista = [5, 6.6, 34, 'a', 'b', [2, 3,4], 'ab']
+#lista = [5, 6.6, 34, 'a', 'b', [2, 3,4], 'ab']
 # print(lista)
 # lista.append(67)
 # print(lista)
@@ -82,3 +82,72 @@
 # print(slownik.values())
 # del slownik[6]
 # print(slownik)
+
+
+# a = 8
+# b = 8
+#
+# if a>b:
+#       print("a is greater than b")
+# elif a<b:
+#       print("a is less than b")
+# else:
+#       print("a is equal to b")
+
+
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# d = int(input())
+#
+# if(a>b) & (b>d):
+#       print(a, c)
+# else:
+#       print(b,d)
+
+# for i in range(8):
+#       print(i)
+# else:
+#       print('koniec petli')
+
+# for i in lista:
+#       print(i)
+
+# for i in range(0,5):
+#       for j in range(0,5):
+#             result = i+j
+#             print(result)
+#       print(' ')
+
+# licznik = 0
+# while licznik < len(lista):
+#       print(lista[licznik])
+#       licznik +=1
+# else:
+#       print('koniec petli')
+
+# licznik = 0
+# while licznik != 10:
+#       if licznik == 7:
+#             print(licznik)
+#             break
+#       else:
+#             licznik += 1
+# else:
+#       print(licznik)
+
+# lista = [3,5,6,12]
+# import sys
+#
+# sys.stdout.write('Wprowadz liczbe: ')
+# a = sys.stdin.readline()
+# a = int(a)
+# i=0
+# while i<len(lista):
+#       if a-lista[i]==0:
+#             print(i, lista[i])
+#             break
+#       else:
+#             i+=1
+# else:
+#       print('Nie ma takiej liczby')
