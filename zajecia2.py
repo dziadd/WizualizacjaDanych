@@ -72,6 +72,41 @@ from math import *
 # plik.close
 # print(znaki)
 
-with open ('tekst.txt', 'r') as plik:
-    znaki=plik.read(10)
-print (znaki)
+# with open ('tekst.txt', 'r') as plik:
+#     znaki=plik.read(10)
+# print (znaki)
+
+#ZADANIA~-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+a = [1-x for x in range(1, 10)]
+b = [4**i for i in range(8)]
+c = [x for x in b if x % 2 == 0]
+
+print(a)
+print(b)
+print(c)
+
+import random
+lista1 = [random.randint(1, 100) for _ in range(10)]
+print(lista1)
+lista2 = [i for i in lista1 if i % 2 == 0]
+print(lista2)
+
+produkty = {"piwo":"ml", "wodka":"ml", "papierosy":"szt", "mleko":"ml", "mieso":"kg", "lizaki":"szt", "batony":"szt" }
+print(produkty)
+produkty_na_sztuki = [produkt for produkt, jednostka in produkty.items() if jednostka == 'szt']
+print(produkty_na_sztuki)
+
+def prostokatny(a, b, c):
+    if(a**2+b**2==c**2 or a**2+c**2==b**2 or b**2+c**2==a**2):
+        return("Trojkat jest prostokatny")
+    else:
+        return("Trojkat nie jest prostokatny")
+
+a = float(input("Podaj wartosc a: "))
+b = float(input("Podaj wartosc b: "))
+c = float(input("Podaj wartosc c: "))
+
+print(prostokatny(a,b,c))
+
+#Zdefiniuj funkcje która policzy pole trapezu. Funkcja ma przyjmować wartości domyślne.
