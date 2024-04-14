@@ -1,125 +1,329 @@
-import numpy as np
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-# a = np.array([0,1])
-# print(a)
-#
-# a = np.arange(2)
-# print(a)
-# print(type(a))
-#
-# print(a.dtype)
-#
-# a = np.arange(2, dtype='int32')
-# print(a.dtype)
-# b = a.astype('float')
-# print(b)
-# print(b.dtype)
-# print(b.shape)
-#
-# print(a.ndim)
-#
-# m = np.array((np.arange(2), np.arange(2)))
-# print(m)
-# print(m.shape)
-# print(m.shape)
-# print(m.ndim)
-
-# macierz = np.array([[1,2],[3,4],[5,6]])
-# print(macierz)
-# print(macierz.shape)
-# print(macierz.ndim)
+//int main() {
+//    printf("Wprowadz tekst: ");
+//    int c;
+//    while ((c = getchar()) != '\n' && c != EOF) {
+//        if (islower(c))
+//            putchar(toupper(c));
+//        else if (isupper(c))
+//            putchar(tolower(c));
+//        else
+//            putchar(c);
+//    }
+//    return 0;
+//}
 
 
-# zera = np.zeros((5,5))
-# jedynki = np.ones((4,4))
-#
-# print(zera)
-# print(jedynki)
-# print(zera.dtype)
-# print(jedynki.dtype)
-#
-# pusta = np.empty((2,2))
-# print(pusta)
-# poz_1 = pusta[1,1]
-# poz_2 = pusta[0,1]
-# print(poz_1)
-# print(poz_2)
-#
-#
-# macierz = np.array([[1,2], [3,4]])
-# print(macierz)
-#
-# liczby = np.arange(1,2,0.1)
-# print(liczby)
-#
-# liczby_lin = np.linspace(1,2,5)
-# print(liczby_lin)
-#
-# z = np.indices((5,3))
-# print(z)
-#
-# x,y = np.mgrid[0:5, 0:5]
-# print(x)
-# print(z)
-
-# mat_diag_k = np.diag([a for a in range(5)], k=-1)
-# print(mat_diag_k)
-
-# znaki = b'abcdef'
-# zn1 = np.frombuffer(znaki, dtype='S1')
-# print(zn1)
-# zn2 = np.frombuffer(znaki, dtype='S6')
-# print(zn2)
-#
-# znaki = 'abcdef'
-# zn3 = np.array(list(znaki))
-# zn4 = np.array(list(znaki), dtype='S1')
-# zn5 = np.array(list(b'abcdef'))
-# zn6 = np.fromiter(znaki, dtype='S1')
-# zn7 = np.fromiter(znaki, dtype='U1')
-# print(zn3)
-# print(zn4)
-# print(zn5)
-# print(zn6)
-# print(zn7)
-
-# mat = np.ones((2,2))
-# mat_1 = np.ones((2,2))
-# mat = mat + mat_1
-# print(mat)
-# print(mat - mat_1)
-# print(mat + mat_1)
-# print(mat / mat_1)
-#
-# a = np.dot(mat, mat_1)
-# print(a)
-# b = mat.dot(mat_1)
-# print(b)
-
-# a = np.arange(10)
-# print(a)
-# s = slice(2,7,2)
-# print(a[s])
-# print(a[2:7:2])
-# print(a[1:])
-# print(a[2:5])
+//int main() {
+//    int mala_litera = 0, duza_litera = 0, cyfra = 0;
+//    char c;
+//
+//    printf("Wprowadz tekst: ");
+//
+//    while ((c = getchar()) != '\n') {
+//        if (islower(c))
+//            mala_litera++;
+//        else if (isupper(c))
+//            duza_litera++;
+//        else if (isdigit(c))
+//            cyfra++;
+//    }
+//
+//    printf("Male litery: %d\n", mala_litera);
+//    printf("Duze litery: %d\n", duza_litera);
+//    printf("Cyfry: %d\n", cyfra);
+//
+//    return 0;
+//}
 
 
-# mat = np.arange(25)
-# mat = mat.reshape((5,5))
-# print(mat[1:])
-# print(mat[:,1])
-# print(mat[:, -1:])
-# print(mat[2:6, 1:3])
-# print(mat[:, range(2,6,2)])
-# print(' ')
 
-x= np.array([[0,1,2],
-             [3,4,5],
-             [6,7,8],
-             [9,10,11,]])
 
-print(x)
-rows = np.array([[0,0], [3,3]])
-cols = np.array([[0,2], [0,2]])
+//int main() {
+//    int c;
+//    while ((c = getchar()) != EOF) {
+//        if (c == '\t') {
+//            printf("    ");
+//        } else {
+//            putchar(c);
+//        }
+//    }
+//    return 0;
+//}
 
+
+//int main() {
+//    int c;
+//    while ((c = getchar()) != EOF) {
+//        putchar(c);
+//        putchar(c);
+//    }
+//    return 0;
+//}
+
+
+//int main() {
+//    char c;
+//    while ((c = getchar()) != EOF) {
+//        printf("%d ", c);
+//    }
+//    return 0;
+//}
+
+//gcc main.c -o char_to_code
+
+
+
+//int main() {
+//    const int N = 1000;
+//    int n;
+//
+//    printf("Podaj liczbe z przedzialu [1, %d]: ", N);
+//    scanf("%d", &n);
+//
+//    srand(time(0));
+//
+//    int tabela[n];
+//
+//
+//    for (int i = 0; i < n; i++) {
+//        tabela[i] = rand() % 100 + 1;
+//    }
+//
+//    for (int i = 0; i < n; i++) {
+//        printf("%d ", tabela[i]);
+//    }
+//
+//    for (int i = 0; i < n; ++i) {
+//        if (tabela[i] <= 0) {
+//            continue;
+//        }
+//        if (tabela[i] % 2 == 1) {
+//            tabela[i] = 3 * tabela[i] + 1;
+//        } else {
+//            do {
+//                tabela[i] /= 2;
+//            } while (tabela[i] % 2 == 0);
+//        }
+//    }
+//    printf("\n");
+//
+//    for (int i = 0; i < n; i++) {
+//        printf("%d ", tabela[i]);
+//    }
+//
+//
+//    return 0;
+//}
+
+
+
+//int main() {
+//    const int N = 1000;
+//    int n;
+//
+//    printf("Podaj liczbe z przedzialu [1, %d]: ", N);
+//    scanf("%d", &n);
+//
+//    srand(time(0));
+//
+//    int tabela[n];
+//
+//    for (int i = 0; i < n; i++) {
+//        tabela[i] = rand() % 100 + 1;
+//        printf("%d ", tabela[i]);
+//    }
+//    printf("\n");
+//
+//    int lewy, prawy;
+//    printf("Podaj liczbe 'lewy' (0 <= lewy < %d): ", n);
+//    scanf("%d", &lewy);
+//    printf("Podaj liczbe 'prawy' (0 <= prawy < %d): ", n);
+//    scanf("%d", &prawy);
+//
+//
+//    if (lewy < 0 || lewy >= n || prawy < 0 || prawy >= n) {
+//        printf("Niepoprawne wartosci 'lewy' lub 'prawy'. Zakres to [0, %d).\n", n);
+//        return 1;
+//    }
+//
+//
+//    while (lewy < prawy) {
+//        int temp = tabela[lewy];
+//        tabela[lewy] = tabela[prawy];
+//        tabela[prawy] = temp;
+//        lewy++;
+//        prawy--;
+//    }
+//
+//
+//    int parzyste = 0, nieparzyste = 0;
+//    for (int i = 0; i < n; ++i) {
+//        if (tabela[i] % 2 == 0) {
+//            parzyste++;
+//        } else {
+//            nieparzyste++;
+//        }
+//    }
+//
+//    printf("Odwrocona tablica:\n");
+//    for (int i = 0; i < n; i++) {
+//        printf("%d ", tabela[i]);
+//    }
+//    printf("\n");
+//
+//    printf("Ilosc parzystych elementow: %d\n", parzyste);
+//    printf("Ilosc nieparzystych elementow: %d\n", nieparzyste);
+//
+//
+//    int max = tabela[0];
+//    int imax = 1;
+//    for (int i = 1; i < n; ++i) {
+//        if (tabela[i] > max) {
+//            max = tabela[i];
+//            imax = 1;
+//        } else if (tabela[i] == max) {
+//            imax++;
+//        }
+//    }
+//
+//    printf("Najwiekszy element: %d\n", max);
+//    printf("Ilosc wystapien najwiekszego elementu: %d\n", imax);
+//
+//    return 0;
+//}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define N 1000
+
+void print_array(int tab[], int n) {
+    for (int i = 0; i < n; ++i) {
+        printf("%d ", tab[i]);
+    }
+    printf("\n");
+}
+
+void generuj(int* tabela, int* n){
+
+    printf("Podaj liczbe z przedzialu [1, %d]: ", N);
+    scanf("%d", n);
+
+    srand(time(0));
+
+    for (int i = 0; i < *n; i++) {
+        tabela[i] = rand() % 100 + 1;
+    }
+
+    print_array(tabela, *n);
+}
+
+void collatz(int tab[], int n) {
+    for (int i = 0; i < n; ++i) {
+        if (tab[i] <= 0) {
+            continue;
+        }
+        if (tab[i] % 2 == 1) {
+            tab[i] = 3 * tab[i] + 1;
+        } else {
+            while (tab[i] % 2 == 0) {
+                tab[i] /= 2;
+            }
+        }
+    }
+    print_array(tab, n);
+}
+
+void zmien(int tab[], int n) {
+    for (int i = 0; i < n; ++i) {
+        if (tab[i] % 2 == 0) {
+            tab[i] = -tab[i];
+        } else {
+            tab[i] *= 2;
+        }
+    }
+    print_array(tab, n);
+}
+
+void signum(int tab[], int n) {
+    for (int i = 0; i < n; ++i) {
+        if (tab[i] > 0) {
+            tab[i] = 1;
+        } else if (tab[i] < 0) {
+            tab[i] = -1;
+        }
+    }
+    print_array(tab, n);
+}
+
+
+void odwroc(int tab[], int n){
+    int lewy, prawy;
+    printf("Podaj liczbe 'lewy' (0 <= lewy < %d): ", n);
+    scanf("%d", &lewy);
+    printf("Podaj liczbe 'prawy' (0 <= prawy < %d): ", n);
+    scanf("%d", &prawy);
+
+
+    if (lewy < 0 || lewy >= n || prawy < 0 || prawy >= n) {
+        printf("Niepoprawne wartosci 'lewy' lub 'prawy'. Zakres to [0, %d).\n", n);
+        return 1;
+    }
+
+
+    while (lewy < prawy) {
+        int temp = tab[lewy];
+        tab[lewy] = tab[prawy];
+        tab[prawy] = temp;
+        lewy++;
+        prawy--;
+    }
+    print_array(tab, n);
+}
+
+int parzystosc(int tab[], int n){
+    int parzyste = 0, nieparzyste = 0;
+    for (int i = 0; i < n; ++i) {
+        if (tab[i] % 2 == 0) {
+            parzyste++;
+        } else {
+            nieparzyste++;
+        }
+    }
+    printf("Ilosc parzystych elementow: %d\n", parzyste);
+    printf("Ilosc nieparzystych elementow: %d\n", nieparzyste);
+}
+
+int ileMaksymalnych(int tab[], int n){
+    int max = tab[0];
+    int imax = 1;
+    for (int i = 1; i < n; ++i) {
+        if (tab[i] > max) {
+            max = tab[i];
+            imax = 1;
+        } else if (tab[i] == max) {
+            imax++;
+        }
+    }
+
+    printf("Najwiekszy element: %d\n", max);
+    printf("Ilosc wystapien najwiekszego elementu: %d\n", imax);
+}
+
+int main() {
+    int tabela[N];
+    int n;
+    generuj(tabela, &n);
+    parzystosc(tabela, n);
+    ileMaksymalnych(tabela, n);
+    odwroc(tabela, n);
+    collatz(tabela, n);
+    zmien(tabela, n);
+    signum(tabela, n);
+
+    return 0;
+}
